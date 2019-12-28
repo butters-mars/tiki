@@ -1,5 +1,5 @@
 package middleware
 
-import "github.com/tiki/logging"
+import "github.com/butters-mars/tiki/logging"
 
 var logger = logging.Logger

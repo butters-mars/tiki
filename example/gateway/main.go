@@ -10,8 +10,8 @@ import (
 
 	consulapi "github.com/hashicorp/consul/api"
 
-	fmgrpc "github.com/tiki/client/grpc"
-	gw "github.com/tiki/example/svcdef"
+	fmgrpc "github.com/butters-mars/tiki/client/grpc"
+	gw "github.com/butters-mars/tiki/example/svcdef"
 )
 
 func run() error {

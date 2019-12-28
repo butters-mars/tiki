@@ -8,9 +8,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/tiki/client/http/middleware"
-	"github.com/tiki/client/sd/endpointer"
-	"github.com/tiki/logging"
+	"github.com/butters-mars/tiki/client/http/middleware"
+	"github.com/butters-mars/tiki/client/sd/endpointer"
+	"github.com/butters-mars/tiki/logging"
 )
 
 var (

@@ -15,8 +15,8 @@ import (
 	"github.com/sirupsen/logrus"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials"
-	"github.com/tiki/config"
-	"github.com/tiki/logging"
+	"github.com/butters-mars/tiki/config"
+	"github.com/butters-mars/tiki/logging"
 )
 
 var (

@@ -23,15 +23,15 @@ import (
 	"github.com/spf13/viper"
 	"google.golang.org/grpc"
 
-	fmgrpc "github.com/tiki/client/grpc"
-	fmhttp "github.com/tiki/client/http"
-	"github.com/tiki/config"
-	fmsgrpc "github.com/tiki/grpc"
-	"github.com/tiki/healthcheck"
-	"github.com/tiki/logging"
-	"github.com/tiki/sd"
-	"github.com/tiki/tracing"
-	"github.com/tiki/utils"
+	fmgrpc "github.com/butters-mars/tiki/client/grpc"
+	fmhttp "github.com/butters-mars/tiki/client/http"
+	"github.com/butters-mars/tiki/config"
+	fmsgrpc "github.com/butters-mars/tiki/grpc"
+	"github.com/butters-mars/tiki/healthcheck"
+	"github.com/butters-mars/tiki/logging"
+	"github.com/butters-mars/tiki/sd"
+	"github.com/butters-mars/tiki/tracing"
+	"github.com/butters-mars/tiki/utils"
 )
 
 // App is the main entry of an application, which provides

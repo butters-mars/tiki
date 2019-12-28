@@ -6,7 +6,7 @@ import (
 	jaegercfg "github.com/uber/jaeger-client-go/config"
 	jaegerlog "github.com/uber/jaeger-client-go/log"
 	"github.com/uber/jaeger-lib/metrics"
-	"github.com/tiki/logging"
+	"github.com/butters-mars/tiki/logging"
 )
 
 var logger = logging.Logger

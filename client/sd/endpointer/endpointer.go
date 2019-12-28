@@ -4,8 +4,8 @@ import (
 	"fmt"
 
 	consul "github.com/hashicorp/consul/api"
-	"github.com/tiki/client/sd/instancer"
-	"github.com/tiki/logging"
+	"github.com/butters-mars/tiki/client/sd/instancer"
+	"github.com/butters-mars/tiki/logging"
 
 	"github.com/go-kit/kit/endpoint"
 	"github.com/go-kit/kit/sd"

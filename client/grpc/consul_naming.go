@@ -10,7 +10,7 @@ import (
 	"github.com/sirupsen/logrus"
 	"google.golang.org/grpc/naming"
 
-	"github.com/tiki/client/sd/instancer"
+	"github.com/butters-mars/tiki/client/sd/instancer"
 )
 
 type sdLogger struct {

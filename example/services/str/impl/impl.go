@@ -4,7 +4,7 @@ import (
 	"context"
 	"strings"
 
-	"github.com/tiki/example/svcdef"
+	"github.com/butters-mars/tiki/example/svcdef"
 )
 
 type StrSrv struct{}

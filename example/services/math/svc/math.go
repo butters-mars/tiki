@@ -5,8 +5,8 @@ import (
 	"flag"
 
 	"google.golang.org/grpc"
-	"github.com/tiki/app"
-	"github.com/tiki/example/svcdef"
+	"github.com/butters-mars/tiki/app"
+	"github.com/butters-mars/tiki/example/svcdef"
 )
 
 // App the app instance

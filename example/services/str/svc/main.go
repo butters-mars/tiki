@@ -3,12 +3,12 @@ package main
 import (
 	"flag"
 
-	"github.com/tiki/auth"
+	"github.com/butters-mars/tiki/auth"
 
 	"google.golang.org/grpc"
-	"github.com/tiki/app"
-	"github.com/tiki/example/services/str/impl"
-	"github.com/tiki/example/svcdef"
+	"github.com/butters-mars/tiki/app"
+	"github.com/butters-mars/tiki/example/services/str/impl"
+	"github.com/butters-mars/tiki/example/svcdef"
 )
 
 // App the app instance

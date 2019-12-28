@@ -9,8 +9,8 @@ import (
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/naming"
 
-	"github.com/tiki/config"
-	"github.com/tiki/logging"
+	"github.com/butters-mars/tiki/config"
+	"github.com/butters-mars/tiki/logging"
 )
 
 var logger = logging.Logger

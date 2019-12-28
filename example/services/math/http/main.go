@@ -9,7 +9,7 @@ import (
 	"golang.org/x/net/context"
 	"google.golang.org/grpc"
 
-	gw "github.com/tiki/example/svcdef"
+	gw "github.com/butters-mars/tiki/example/svcdef"
 )
 
 var (

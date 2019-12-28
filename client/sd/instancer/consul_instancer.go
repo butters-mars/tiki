@@ -11,7 +11,7 @@ import (
 	"github.com/go-kit/kit/util/conn"
 	consul "github.com/hashicorp/consul/api"
 
-	"github.com/tiki/logging"
+	"github.com/butters-mars/tiki/logging"
 )
 
 const defaultIndex = 0

@@ -3,7 +3,7 @@ package main
 import (
 	"flag"
 
-	"github.com/tiki/app"
+	"github.com/butters-mars/tiki/app"
 )
 
 var (

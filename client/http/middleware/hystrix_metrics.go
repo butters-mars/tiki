@@ -8,7 +8,7 @@ import (
 	metricCollector "github.com/afex/hystrix-go/hystrix/metric_collector"
 	"github.com/prometheus/client_golang/prometheus"
 
-	"github.com/tiki/utils"
+	"github.com/butters-mars/tiki/utils"
 )
 
 // PrometheusNamespace namespace for hystrix metrics

@@ -3,7 +3,7 @@ package utils
 import (
 	"net"
 
-	"github.com/tiki/logging"
+	"github.com/butters-mars/tiki/logging"
 )
 
 var logger = logging.Logger

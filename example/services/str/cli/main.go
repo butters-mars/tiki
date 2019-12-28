@@ -14,7 +14,7 @@ import (
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/metadata"
 
-	"github.com/tiki/example/svcdef"
+	"github.com/butters-mars/tiki/example/svcdef"
 )
 
 func main() {

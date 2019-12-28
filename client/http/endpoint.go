@@ -20,9 +20,9 @@ import (
 	"github.com/go-kit/kit/endpoint"
 	"github.com/go-kit/kit/sd"
 
-	"github.com/tiki/client/http/lb"
-	"github.com/tiki/client/http/middleware"
-	"github.com/tiki/client/sd/endpointer"
+	"github.com/butters-mars/tiki/client/http/lb"
+	"github.com/butters-mars/tiki/client/http/middleware"
+	"github.com/butters-mars/tiki/client/sd/endpointer"
 )
 
 // endpointClient represents client for a certain (http://host/uri - METHOD) which contains several
