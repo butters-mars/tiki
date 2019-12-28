@@ -1,0 +1,26 @@
+syntax = "proto3";
+package svcdef;
+
+enum Gender {
+    X = 0;
+    M = 1;
+    F = 2;
+}
+
+message User {
+    int64 id = 1;
+    string name = 2;
+    string nickName = 3;
+    Gender gender = 4;
+    string avatar = 5;
+    string phone = 6;
+}
+
+message LoginReq {
+    string name = 1;
+    string pwd = 2;
+}
+
+message LoginResp {
+    string token = 1;
+}

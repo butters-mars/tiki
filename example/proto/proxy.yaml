@@ -1,0 +1,14 @@
+type: google.api.Service
+config_version: 3
+
+http:
+  rules:
+  - selector: svcdef.Math.Do
+    post: /v1/math/do
+    body: "*"
+  - selector: svcdef.User.GetProfile
+    get: /v1/profile/{id}
+  - selector: svcdef.String.Reverse
+    get: /v1/string/reverse/{str}
+  - selector: svcdef.String.UpperCase
+    get: /v1/string/upper/{str}

@@ -1,0 +1,22 @@
+syntax = "proto3";
+package svcdef;
+
+enum OpType {
+    Add = 0;
+    Sub = 1;
+    Mul = 2;
+}
+
+message Args {
+    int32 a = 1;
+    int32 b = 2;
+    OpType op = 3;
+}
+
+message Result {
+    int32 v = 1;
+}
+
+service Math {
+    rpc Do(Args) returns (Result) {}
+}

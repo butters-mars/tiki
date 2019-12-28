@@ -1,0 +1,15 @@
+syntax = "proto3";
+package svcdef;
+
+import "github.com/envoyproxy/protoc-gen-validate/validate/validate.proto";
+
+message StringMsg {
+    string str = 1 [(validate.rules).string = {
+        min_len:5, max_len:100
+    }];
+}
+
+service String {
+    rpc Reverse(StringMsg) returns (StringMsg) {}
+    rpc UpperCase(StringMsg) returns (StringMsg) {}
+}

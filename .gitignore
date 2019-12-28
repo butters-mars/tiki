@@ -1,0 +1,5 @@
+*.pb.go
+*.gw.go
+*.swagger.json
+*.bin
+*.so

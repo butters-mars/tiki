@@ -1,0 +1,5 @@
+appname: user.svc
+port: 5333
+consul:
+  Address: localhost:8500
+  Datacenter: dc1
