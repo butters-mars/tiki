@@ -93,7 +93,7 @@ func (s *Instancer) loop(lastIndex uint64) {
 		case err != nil:
 			s.logger.Log("err", err)
 			time.Sleep(d)
-			d = conn.Exponential(d)
+			d *= 2
 			s.cache.Update(sd.Event{Err: err})
 			if s.listener != nil {
 				s.listener(instances, s.tagMap, err)
