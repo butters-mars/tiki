@@ -8,7 +8,7 @@ import (
 	"github.com/go-kit/kit/log"
 	"github.com/go-kit/kit/sd"
 	csd "github.com/go-kit/kit/sd/consul"
-	"github.com/go-kit/kit/util/conn"
+	//"github.com/go-kit/kit/util/conn"
 	consul "github.com/hashicorp/consul/api"
 
 	"github.com/butters-mars/tiki/logging"
