@@ -16,7 +16,7 @@ import (
 
 const defaultIndex = 0
 
-var logger = logging.Logger
+var logger = logging.L
 
 // Instancer yields instances for a service in Consul.
 type Instancer struct {

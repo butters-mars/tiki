@@ -21,7 +21,7 @@ var (
 
 	settingProvider SettingProvider
 
-	logger = logging.Logger
+	logger = logging.L
 
 	//mutext = sync.RWMutex{}
 	// use global map to avoid recreating apiclient

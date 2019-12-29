@@ -12,7 +12,7 @@ import (
 	csd "github.com/go-kit/kit/sd/consul"
 )
 
-var logger = logging.Logger
+var logger = logging.L
 
 // SDType defines service discovery types
 type SDType string

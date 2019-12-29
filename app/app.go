@@ -65,7 +65,7 @@ const (
 	localAgent        = "127.0.0.1:6831"
 )
 
-var logger = logging.Logger
+var logger = logging.L
 
 // New creates an application instance
 func New(cfgName string) App {
@@ -80,7 +80,7 @@ func New(cfgName string) App {
 
 	initMetrics()
 	initHealthcheck()
-	grpclog.SetLogger(logging.Logger)
+	grpclog.SetLogger(logging.L)
 	logger.Infof("setup tracing")
 	closer, err := tracing.Init(app.cfg.APPName, app.cfg.Tracing)
 	if err != nil {

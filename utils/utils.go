@@ -6,7 +6,7 @@ import (
 	"github.com/butters-mars/tiki/logging"
 )
 
-var logger = logging.Logger
+var logger = logging.L
 
 // GetIP returns the first non-lo ip of this machine
 func GetIP() string {

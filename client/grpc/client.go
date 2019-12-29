@@ -13,7 +13,7 @@ import (
 	"github.com/butters-mars/tiki/logging"
 )
 
-var logger = logging.Logger
+var logger = logging.L
 
 type grpcClient struct {
 }

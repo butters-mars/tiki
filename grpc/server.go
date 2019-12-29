@@ -20,7 +20,7 @@ import (
 )
 
 var (
-	logger = logging.Logger
+	logger = logging.L
 )
 
 // NewServer creates a grpc server with middlewares setup

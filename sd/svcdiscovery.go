@@ -2,7 +2,7 @@ package sd
 
 import "github.com/butters-mars/tiki/logging"
 
-var logger = logging.Logger
+var logger = logging.L
 
 // ServiceDiscoverySt defines config for consul discovery
 type ServiceDiscoverySt struct {

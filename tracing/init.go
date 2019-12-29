@@ -9,7 +9,7 @@ import (
 	"github.com/butters-mars/tiki/logging"
 )
 
-var logger = logging.Logger
+var logger = logging.L
 
 // Init inits jaeger tracing with given appname and configuration
 func Init(appname string, cfg *jaegercfg.Configuration) (closer io.Closer, err error) {
