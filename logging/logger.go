@@ -4,15 +4,14 @@ import (
 	"fmt"
 
 	"github.com/sirupsen/logrus"
-	log "github.com/sirupsen/logrus"
 )
 
 // L the global logger
-var L = log.New()
+var L = logrus.New()
 
 func init() {
 	L.AddHook(&ContextHook{})
-	L.Level = logrus.TraceLevel
+	L.Level = logrus.DebugLevel
 }
 
 type logType int
@@ -27,9 +26,9 @@ const (
 )
 
 // WTrace trace log with fields
-func WTrace(msg string, kvs ...interface{}) {
-	withFields(trace, msg, kvs...)
-}
+// func WTrace(msg string, kvs ...interface{}) {
+// 	withFields(trace, msg, kvs...)
+// }
 
 // WDebug debug log with fields
 func WDebug(msg string, kvs ...interface{}) {
