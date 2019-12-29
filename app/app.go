@@ -36,7 +36,15 @@ import (
 
 // App is the main entry of an application, which provides
 // setup of the framework based on configuration
-type App struct {
+type App interface {
+	GetConfigProps() map[string]string
+	NewGRPCConn(addr string) (*grpc.ClientConn, error)
+	SetAuthFunc(func(context.Context) (context.Context, error))
+	RegisterGRPCServer(func(*grpc.Server))
+	Start()
+}
+
+type _App struct {
 	cfgName    string
 	cfg        *config.Config
 	registrars []func(base *grpc.Server)
@@ -72,7 +80,7 @@ func New(cfgName string) App {
 	if cfgName == "" {
 		cfgName = configName
 	}
-	app := App{
+	app := &_App{
 		cfgName:    cfgName,
 		registrars: make([]func(base *grpc.Server), 0),
 		cfg:        initConfig(cfgName),
@@ -100,12 +108,12 @@ func New(cfgName string) App {
 }
 
 // SetAuthFunc set the auth function
-func (app App) SetAuthFunc(authFunc func(context.Context) (context.Context, error)) {
+func (app *_App) SetAuthFunc(authFunc func(context.Context) (context.Context, error)) {
 	app.authFunc = authFunc
 }
 
 //RegisterGRPCServer add an registrar, and will do registration when app starts
-func (app App) RegisterGRPCServer(registrar func(base *grpc.Server)) {
+func (app *_App) RegisterGRPCServer(registrar func(base *grpc.Server)) {
 	if registrar == nil {
 		return
 	}
@@ -114,17 +122,17 @@ func (app App) RegisterGRPCServer(registrar func(base *grpc.Server)) {
 }
 
 // NewGRPCConn creates grpc client conn from given address
-func (app App) NewGRPCConn(addr string) (*grpc.ClientConn, error) {
+func (app *_App) NewGRPCConn(addr string) (*grpc.ClientConn, error) {
 	return fmgrpc.NewClientConn(addr, app.cfg.ServiceDiscovery)
 }
 
 // GetConfigProps return properties defined in app config
-func (app App) GetConfigProps() map[string]string {
+func (app *_App) GetConfigProps() map[string]string {
 	return app.cfg.Properties
 }
 
 // Start starts the application
-func (app App) Start() {
+func (app *_App) Start() {
 	if app.tracingCloser != nil {
 		defer app.tracingCloser.Close()
 	}
