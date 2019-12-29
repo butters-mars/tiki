@@ -26,9 +26,9 @@ const (
 )
 
 // WTrace trace log with fields
-// func WTrace(msg string, kvs ...interface{}) {
-// 	withFields(trace, msg, kvs...)
-// }
+func WTrace(msg string, kvs ...interface{}) {
+	withFields(trace, msg, kvs...)
+}
 
 // WDebug debug log with fields
 func WDebug(msg string, kvs ...interface{}) {
