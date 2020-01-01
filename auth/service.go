@@ -1,16 +1,20 @@
 package auth
 
+import "context"
+
 type UserInfo struct {
-	Name     string
-	PhotoURL string
-	Email    string
-	Phone    string
-	Location string
-	Provider string
+	Name          string
+	PhotoURL      string
+	Email         string
+	Phone         string
+	Location      string
+	Provider      string
+	Disabled      bool
+	EmailVerified bool
 }
 
 // Service -
 type Service interface {
-	VerifyToken(token interface{}) (uid string, err error)
-	GetUserInfo(uid string) (UserInfo, error)
+	VerifyToken(ctx context.Context, token interface{}) (uid string, err error)
+	GetUserInfo(ctx context.Context, uid string) (UserInfo, error)
 }
