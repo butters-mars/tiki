@@ -12,11 +12,11 @@ import (
 	grpc_validator "github.com/grpc-ecosystem/go-grpc-middleware/validator"
 	grpc_prometheus "github.com/grpc-ecosystem/go-grpc-prometheus"
 
+	"github.com/butters-mars/tiki/config"
+	"github.com/butters-mars/tiki/logging"
 	"github.com/sirupsen/logrus"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials"
-	"github.com/butters-mars/tiki/config"
-	"github.com/butters-mars/tiki/logging"
 )
 
 var (
@@ -38,7 +38,10 @@ func NewServer(logEntry *logrus.Entry, auth grpc_auth.AuthFunc, authCfg *config.
 	srvOpts := make([]grpc.ServerOption, 0)
 	if authCfg != nil && authCfg.TLS {
 		logger.Infof("[grpc] using TLS for server")
-		creds, _ := credentials.NewServerTLSFromFile(authCfg.CertFile, authCfg.KeyFile)
+		creds, err := credentials.NewServerTLSFromFile(authCfg.CertFile, authCfg.KeyFile)
+		if err != nil {
+			logger.Fatalf("[grpc] fail to create TLS server: %v", err)
+		}
 		srvOpts = append(srvOpts, grpc.Creds(creds))
 	}
 
