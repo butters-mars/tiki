@@ -37,7 +37,7 @@ func NewServer(logEntry *logrus.Entry, auth grpc_auth.AuthFunc, authCfg *config.
 
 	srvOpts := make([]grpc.ServerOption, 0)
 	if authCfg != nil && authCfg.TLS {
-		logger.Infof("[grpc] using TLS for server")
+		logger.Infof("[grpc] using TLS for server, cert=[%s], key=[%s]", authCfg.CertFile, authCfg.KeyFile)
 		creds, err := credentials.NewServerTLSFromFile(authCfg.CertFile, authCfg.KeyFile)
 		if err != nil {
 			logger.Fatalf("[grpc] fail to create TLS server: %v", err)
